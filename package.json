@@ -1,0 +1,39 @@
+{
+  "name": "std.ts",
+  "version": "0.0.2",
+  "description": "Standard Library for Typescript",
+  "main": "lib/std.js",
+  "typings": "lib/std.d.ts",
+  "scripts": {
+    "test": "mocha -r ts-node/register test/*.ts test/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IpiVasquez/std.ts.git"
+  },
+  "keywords": [
+    "std",
+    "typescript"
+  ],
+  "author": "Hector J. Vasquez",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/IpiVasquez/std.ts/issues"
+  },
+  "homepage": "https://github.com/IpiVasquez/std.ts#readme",
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/debug": "0.0.30",
+    "@types/mocha": "^2.2.43",
+    "chai": "^4.1.2",
+    "debug": "^3.1.0",
+    "grunt": "^1.0.1",
+    "grunt-exec": "^3.0.0",
+    "grunt-ts": "^6.0.0-beta.16",
+    "minify": "^3.0.2",
+    "mocha": "^4.0.1",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3",
+    "webpack": "^3.8.1"
+  }
+}
