@@ -12,3 +12,5 @@ JavaScript & TypeScript lack of data structures limits the developers' ability t
 
 
 ## Upcoming features
+* Iterators
+* TreeMaps
