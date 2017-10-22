@@ -1,11 +1,12 @@
 {
   "name": "std.ts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Standard Library for Typescript",
   "main": "lib/std.js",
   "typings": "lib/std.d.ts",
   "scripts": {
-    "test": "mocha -r ts-node/register test/*.ts test/**/*.ts"
+    "test": "mocha -r ts-node/register test/*.ts test/**/*.ts",
+    "grunt": "grunt"
   },
   "repository": {
     "type": "git",
@@ -35,5 +36,6 @@
     "ts-node": "^3.3.0",
     "typescript": "^2.5.3",
     "webpack": "^3.8.1"
-  }
+  },
+  "dependencies": {}
 }

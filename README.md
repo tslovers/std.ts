@@ -9,8 +9,32 @@ TypeScript Standard Library (std.ts) is a collection of classes and functions in
 JavaScript & TypeScript lack of data structures limits the developers' ability to solve problems; where other data structures would work better with less code assuring the developer the maximum efficiency provided by the Standard Library.
 
 ## Features
-
+* Containers
+    * bitset
+    * stack
+    * queue
+    * priority queue
 
 ## Upcoming features
-* Iterators
-* TreeMaps
+* Containers
+    * array
+    * deque
+    * forward_list
+    * list
+    * map
+    * set
+    * unordered_map
+    * unordered_set
+    * vector
+* General
+    * algorithm
+    * iterator
+    * tuple
+    * utility
+* Streams and IO
+
+## Installation
+
+```bash
+$ npm install --save std.ts 
+```
