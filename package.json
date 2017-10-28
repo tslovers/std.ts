@@ -6,6 +6,7 @@
   "typings": "lib/std.d.ts",
   "scripts": {
     "test": "mocha -r ts-node/register test/*.ts test/**/*.ts",
+    "prepare": "grunt ts:default",
     "grunt": "grunt"
   },
   "repository": {
@@ -28,14 +29,14 @@
     "@types/mocha": "^2.2.43",
     "chai": "^4.1.2",
     "debug": "^3.1.0",
-    "grunt": "^1.0.1",
-    "grunt-exec": "^3.0.0",
-    "grunt-ts": "^6.0.0-beta.16",
-    "minify": "^3.0.2",
+    "gulp": "^3.9.1",
+    "gulp-minify": "^1.0.0",
+    "gulp-typescript": "^3.2.3",
+    "gulp-webpack": "^1.5.0",
     "mocha": "^4.0.1",
+    "run-sequence": "^2.2.0",
     "ts-node": "^3.3.0",
-    "typescript": "^2.5.3",
-    "webpack": "^3.8.1"
+    "typescript": "^2.5.3"
   },
   "dependencies": {}
 }

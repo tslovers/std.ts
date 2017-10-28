@@ -15,5 +15,7 @@
  * limitations under the License.
  */
 
+export * from './PriorityQueue';
 export * from './BitSet';
+export * from './Queue';
 export * from './Stack';
