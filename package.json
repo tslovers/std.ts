@@ -1,13 +1,13 @@
 {
   "name": "std.ts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Standard Library for Typescript",
   "main": "lib/std.js",
   "typings": "lib/std.d.ts",
   "scripts": {
     "test": "mocha -r ts-node/register test/*.ts test/**/*.ts",
-    "prepare": "grunt ts:default",
-    "grunt": "grunt"
+    "prepare": "gulp",
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
