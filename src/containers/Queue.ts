@@ -39,7 +39,7 @@ export class Queue<T> {
     }
 
     /**
-     * Access the next element.
+     * Accesses the next element.
      * @returns The front element on the queue.
      */
     public front(): T {
@@ -47,19 +47,27 @@ export class Queue<T> {
     }
 
     /**
-     * Access the last element.
-     * @param e The back of the queue.
+     * Accesses the last element.
+     * @returns e The back of the queue.
      */
     public back(): T {
         return this._store[this.size() - 1];
     }
 
     /**
-     * Extract the front element from the queue and returns it.
+     * Extracts the front element from the queue and returns it.
      * @returns The front element of the queue.
      */
     public pop(): T {
         return this._store.shift();
+    }
+
+    /**
+     * Extracts the back element from the queue and returns it.
+     * @returns The back element at the queue.
+     */
+    public popBack(): T {
+        return this._store.pop();
     }
 
     /**
