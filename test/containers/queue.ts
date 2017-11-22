@@ -19,7 +19,7 @@ import {expect} from 'chai';
 import {Queue} from '../../src/containers/Queue';
 
 describe('queue', () => {
-    let queue = new Queue<number>();
+    const queue = new Queue<number>();
 
     it('should have 3 elements', () => {
         queue.push(1);

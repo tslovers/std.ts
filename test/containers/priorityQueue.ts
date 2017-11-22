@@ -33,15 +33,17 @@ interface PQTest {
  * @returns 1 if a has higher value than b, 0 if they're equals, -1 otherwise.
  */
 function pqTestCompare(a: PQTest, b: PQTest): number {
-    if (b.value === a.value)
+    if (b.value === a.value) {
         return 0;
-    if (a.value > b.value)
+    }
+    if (a.value > b.value) {
         return 1;
+    }
     return -1;
 }
 
 describe('priority queue', () => {
-    let queue = new PriorityQueue<PQTest>(pqTestCompare);
+    const queue = new PriorityQueue<PQTest>(pqTestCompare);
 
     it('should have 3 elements', () => {
         // First element

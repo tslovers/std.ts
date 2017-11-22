@@ -10,10 +10,14 @@ JavaScript & TypeScript lack of data structures limits the developers' ability t
 
 ## Features
 * Containers
-    * bitset
-    * stack
-    * queue
-    * priority queue
+    * bitset as BitSet
+    * stack as Stack
+    * queue as Queue
+    * priority queue as PriorityQueue
+* Others
+    * Algorithm
+        * lower bound as lowerBound
+        * upper bound as upperBound
 
 ## Upcoming features
 * Containers

@@ -16,3 +16,4 @@
  */
 
 export * from './containers';
+export * from './algorithm';

@@ -41,9 +41,9 @@ export class PriorityQueue<T> extends Queue<T> {
     public push(e: T): void {
         let i = 0, comparison;
         for (i = 0; i < this.size(); i++) {
-            if ((comparison = this.compareFunction(e, this._store[i])) > 0)
+            if ((comparison = this.compareFunction(e, this._store[i])) > 0) {
                 break;
-            else if (comparison === 0) {
+            } else if (comparison === 0) {
                 i++;
                 break;
             }
@@ -63,9 +63,11 @@ export class PriorityQueue<T> extends Queue<T> {
  * @returns 0 if a and b are equal, 1 if a is greater than b, -1 otherwise.
  */
 function dc(a: any, b: any): number {
-    if (a === b)
+    if (a === b) {
         return 0;
-    if (a > b)
+    }
+    if (a > b) {
         return 1;
+    }
     return -1;
 }

@@ -19,7 +19,7 @@ import {expect} from 'chai';
 import {Stack} from '../../src/containers/Stack';
 
 describe('stack', () => {
-    let stack = new Stack<number>();
+    const stack = new Stack<number>();
 
     it('should have 3 elements', () => {
         stack.push(1);

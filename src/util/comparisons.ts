@@ -15,7 +15,19 @@
  * limitations under the License.
  */
 
-export * from './PriorityQueue';
-export * from './BitSet';
-export * from './Queue';
-export * from './Stack';
+/**
+ * Compares two values. This function is not recommended to use with non
+ * primitive values.
+ * @param a Value to compare.
+ * @param b Value to compare.
+ * @returns 1 if a is greater than b, 0 if a equals b, -1 otherwise.
+ */
+export function defaultComparison(a: any, b: any): number {
+    if (a > b) {
+        return 1;
+    } else if (a < b) {
+        return -1;
+    } else {
+        return 0;
+    }
+}
