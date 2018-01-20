@@ -1,9 +1,20 @@
+# Probably the only npm needs is the lib directory
+# Directories
+.idea
+.tscache
+bundle
+src
+test
+# Files!
+.gitignore
+.mailmap
+.travis.yml
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+gulpfile.js
+ISSUE_TEMPLATE.md
+LICENSE
+PULL_REQUEST_TEMPLATE.md
 tsconfig.json
+tslint.json
 webpack.config.js
-CHANGELOG.md
-.idea/
-# include or not include?
-bundle/
-# include or not include?
-src/
-docs/

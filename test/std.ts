@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import * as std from '../src/std';
+import * as std from '@std/std';
 
 describe('std.ts', () => {
     it('It works!', () => {

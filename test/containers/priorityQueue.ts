@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
+import {PriorityQueue} from '@std/containers/PriorityQueue';
 import {expect} from 'chai';
-import {PriorityQueue} from '../../src/containers/PriorityQueue';
 
 /**
  * Generic interface for testing Priority Queue.

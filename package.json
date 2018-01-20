@@ -1,11 +1,11 @@
 {
   "name": "std.ts",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Standard Library for Typescript",
   "main": "lib/std.js",
   "types": "lib/std.d.ts",
   "scripts": {
-    "test": "mocha -r ts-node/register test/*.ts test/**/*.ts",
+    "test": "mocha -r ts-node/register -r tsconfig-paths/register test/*.ts test/**/*.ts",
     "prepare": "gulp",
     "lint": "gulp lint",
     "gulp": "gulp"
@@ -38,6 +38,7 @@
     "mocha": "^4.0.1",
     "run-sequence": "^2.2.0",
     "ts-node": "^3.3.0",
+    "tsconfig-paths": "^3.1.1",
     "tslint": "^5.8.0",
     "typescript": "^2.5.3"
   },

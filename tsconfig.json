@@ -1,21 +1,31 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": ".",
-    "target": "es5",
-    "module": "commonjs",
+    "baseUrl": ".",
     "declaration": true,
-    "sourceMap": true,
-    "removeComments": false,
-    "preserveConstEnums": true,
+    "module": "commonjs",
     "noImplicitAny": true,
-    "outDir": "./lib"
+    "outDir": "./lib",
+    "paths": {
+      "@std/*": [
+        "src/*"
+      ]
+    },
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "rootDir": ".",
+    "sourceMap": true,
+    "target": "es5"
   },
   "files": [
-    "./src/**/*.ts"
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "test"
+    "node_modules"
   ]
 }

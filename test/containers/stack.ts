@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
+import {Stack} from '@std/containers/Stack';
 import {expect} from 'chai';
-import {Stack} from '../../src/containers/Stack';
 
 describe('stack', () => {
     const stack = new Stack<number>();

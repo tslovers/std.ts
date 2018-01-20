@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
+import {Queue} from '@std/containers/Queue';
 import {expect} from 'chai';
-import {Queue} from '../../src/containers/Queue';
 
 describe('queue', () => {
     const queue = new Queue<number>();

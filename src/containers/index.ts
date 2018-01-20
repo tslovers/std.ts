@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-export * from './PriorityQueue';
-export * from './BitSet';
-export * from './Queue';
-export * from './Stack';
+export * from '@std/containers/PriorityQueue';
+export * from '@std/containers/BitSet';
+export * from '@std/containers/Queue';
+export * from '@std/containers/Stack';

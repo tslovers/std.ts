@@ -15,8 +15,8 @@
  * limitations under the License.
  */
 
+import {lowerBound} from '@std/algorithm';
 import {expect} from 'chai';
-import {lowerBound} from '../../src/algorithm';
 
 describe('structures::lowerBound', () => {
     it('should find lower bounds', () => {

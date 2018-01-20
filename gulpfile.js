@@ -5,15 +5,14 @@ let webpack = require('gulp-webpack');
 let compress = require('gulp-minify');
 let runSeq = require('run-sequence');
 
-let tsProject = ts.createProject('tsconfig.json', {
-    // Changes root dir so a new src folder will not be created on ./lib
-    rootDir: 'src'
-});
-
 gulp.task('default', () => runSeq('ts', 'webpack', 'compress'));
 
 gulp.task('ts', function () {
-    let tsResult = tsProject.src().pipe(tsProject());
+    let tsProject = ts.createProject('tsconfig.json', {
+        // Changes root dir so a new src folder will not be created on ./lib
+        rootDir: 'src'
+    });
+    let tsResult = gulp.src('src/**/*.ts').pipe(tsProject());
     tsResult.dts.pipe(gulp.dest('lib'));
     return tsResult.js.pipe(gulp.dest('lib'));
 });
@@ -31,7 +30,7 @@ gulp.task('watch', ['ts'], function () {
 
 gulp.task('webpack', function () {
     return gulp.src('lib/maths.js')
-        .pipe(webpack(require('./webpack.config')))
+        .pipe(webpack(require('webpack.config')))
         .pipe(gulp.dest('.'));
 });
 
