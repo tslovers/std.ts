@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import {Queue} from '@std/containers/Queue';
+import {Queue} from './Queue';
 
 /**
  * Priority queues are a type of queues which prioritizes some elements

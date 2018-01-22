@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import {PriorityQueue} from '@std/containers/PriorityQueue';
+import {PriorityQueue} from '../../src/containers/PriorityQueue';
 import {expect} from 'chai';
 
 /**

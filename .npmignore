@@ -3,8 +3,8 @@
 .idea
 .tscache
 bundle
-src
 test
+src
 # Files!
 .gitignore
 .mailmap

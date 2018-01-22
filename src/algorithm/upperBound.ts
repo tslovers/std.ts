@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import {defaultComparison} from '@std/util/comparisons';
+import {defaultComparison} from '../util/comparisons';
 
 /**
  * Searches for the element specified, if the element is not found, it returns

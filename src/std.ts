@@ -15,5 +15,5 @@
  * limitations under the License.
  */
 
-export * from '@std/containers';
-export * from '@std/algorithm';
+export * from './containers';
+export * from './algorithm';

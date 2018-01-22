@@ -1,16 +1,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": ".",
     "declaration": true,
     "module": "commonjs",
     "noImplicitAny": true,
     "outDir": "./lib",
-    "paths": {
-      "@std/*": [
-        "src/*"
-      ]
-    },
     "preserveConstEnums": true,
     "removeComments": false,
     "rootDir": ".",

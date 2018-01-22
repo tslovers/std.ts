@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import {Stack} from '@std/containers/Stack';
+import {Stack} from '../../src/containers/Stack';
 import {expect} from 'chai';
 
 describe('stack', () => {

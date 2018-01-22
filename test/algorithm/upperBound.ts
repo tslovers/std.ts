@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import {upperBound} from '@std/algorithm';
+import {upperBound} from '../../src/algorithm';
 import {expect} from 'chai';
 
 describe('structures::lowerBound', () => {
