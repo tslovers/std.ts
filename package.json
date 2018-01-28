@@ -1,6 +1,6 @@
 {
   "name": "std.ts",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Standard Library for Typescript",
   "main": "lib/std.js",
   "types": "types/std.d.ts",
