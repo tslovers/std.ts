@@ -19,30 +19,30 @@ import {Queue} from '../../src/containers/Queue';
 import {expect} from 'chai';
 
 describe('queue', () => {
-    const queue = new Queue<number>();
+  const queue = new Queue<number>();
 
-    it('should have 3 elements', () => {
-        queue.push(1);
-        queue.push(3);
-        queue.push(5);
-        expect(queue.size()).to.equals(3);
-    });
+  it('should have 3 elements', () => {
+    queue.push(1);
+    queue.push(3);
+    queue.push(5);
+    expect(queue.size()).to.equals(3);
+  });
 
-    it('should have 1 at front', () => {
-        expect(queue.front()).to.equals(1);
-    });
+  it('should have 1 at front', () => {
+    expect(queue.front()).to.equals(1);
+  });
 
-    it('should have 5 at back', () => {
-        expect(queue.back()).to.equals(5);
-    });
+  it('should have 5 at back', () => {
+    expect(queue.back()).to.equals(5);
+  });
 
-    it('should pop 1, then pop 3, then 5', () => {
-        expect(queue.pop()).to.equals(1);
-        expect(queue.pop()).to.equals(3);
-        expect(queue.pop()).to.equals(5);
-    });
+  it('should pop 1, then pop 3, then 5', () => {
+    expect(queue.pop()).to.equals(1);
+    expect(queue.pop()).to.equals(3);
+    expect(queue.pop()).to.equals(5);
+  });
 
-    it('should have no elements left', () => {
-        expect(queue.size()).to.equals(0);
-    });
+  it('should have no elements left', () => {
+    expect(queue.size()).to.equals(0);
+  });
 });

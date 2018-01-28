@@ -19,26 +19,26 @@ import {Stack} from '../../src/containers/Stack';
 import {expect} from 'chai';
 
 describe('stack', () => {
-    const stack = new Stack<number>();
+  const stack = new Stack<number>();
 
-    it('should have 3 elements', () => {
-        stack.push(1);
-        stack.push(3);
-        stack.push(5);
-        expect(stack.size()).to.equals(3);
-    });
+  it('should have 3 elements', () => {
+    stack.push(1);
+    stack.push(3);
+    stack.push(5);
+    expect(stack.size()).to.equals(3);
+  });
 
-    it('should have 5 at top', () => {
-        expect(stack.top()).to.equals(5);
-    });
+  it('should have 5 at top', () => {
+    expect(stack.top()).to.equals(5);
+  });
 
-    it('should pop 5, then pop 3, then 1', () => {
-        expect(stack.pop()).to.equals(5);
-        expect(stack.pop()).to.equals(3);
-        expect(stack.pop()).to.equals(1);
-    });
+  it('should pop 5, then pop 3, then 1', () => {
+    expect(stack.pop()).to.equals(5);
+    expect(stack.pop()).to.equals(3);
+    expect(stack.pop()).to.equals(1);
+  });
 
-    it('should have no elements left', () => {
-        expect(stack.size()).to.equals(0);
-    });
+  it('should have no elements left', () => {
+    expect(stack.size()).to.equals(0);
+  });
 });

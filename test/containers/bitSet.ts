@@ -19,41 +19,41 @@ import {expect} from 'chai';
 import {BitSet} from '../../src/containers/BitSet';
 
 describe('structures::BitSet', () => {
-    const n = new BitSet(96, new Uint32Array([4, 4, 4]));
+  const n = new BitSet(96, new Uint32Array([4, 4, 4]));
 
-    it('should have 96 bits', () => {
-        expect(n.size).to.equals(96);
-        expect(n.get(2)).to.equals(true);
-        expect(n.get(0)).to.equals(false);
-    });
+  it('should have 96 bits', () => {
+    expect(n.size).to.equals(96);
+    expect(n.get(2)).to.equals(true);
+    expect(n.get(0)).to.equals(false);
+  });
 
-    it('should have bit 2 on and 0 bit off', () => {
-        expect(n.get(2)).to.equals(true);
-        expect(n.get(0)).to.equals(false);
-    });
+  it('should have bit 2 on and 0 bit off', () => {
+    expect(n.get(2)).to.equals(true);
+    expect(n.get(0)).to.equals(false);
+  });
 
-    it('should do all operations correctly', () => {
-        n.setAll(true);
-        expect(n.size).to.equals(96);
-        expect(n.get(94)).to.equals(true);
-        expect(n.get(0)).to.equals(true);
-        expect(n.none()).to.equals(false);
-        expect(n.all()).to.equals(true);
-        expect(n.any()).to.equals(true);
+  it('should do all operations correctly', () => {
+    n.setAll(true);
+    expect(n.size).to.equals(96);
+    expect(n.get(94)).to.equals(true);
+    expect(n.get(0)).to.equals(true);
+    expect(n.none()).to.equals(false);
+    expect(n.all()).to.equals(true);
+    expect(n.any()).to.equals(true);
 
-        n.setAll(false);
-        expect(n.size).to.equals(96);
-        expect(n.get(94)).to.equals(false);
-        expect(n.get(0)).to.equals(false);
-        expect(n.none()).to.equals(true);
-        expect(n.all()).to.equals(false);
-        expect(n.any()).to.equals(false);
+    n.setAll(false);
+    expect(n.size).to.equals(96);
+    expect(n.get(94)).to.equals(false);
+    expect(n.get(0)).to.equals(false);
+    expect(n.none()).to.equals(true);
+    expect(n.all()).to.equals(false);
+    expect(n.any()).to.equals(false);
 
-        n.set(96, true);
-        expect(n.size).to.equals(97);
-        expect(n.get(96)).to.equals(true);
-        expect(n.none()).to.equals(false);
-        expect(n.all()).to.equals(false);
-        expect(n.any()).to.equals(true);
-    });
+    n.set(96, true);
+    expect(n.size).to.equals(97);
+    expect(n.get(96)).to.equals(true);
+    expect(n.none()).to.equals(false);
+    expect(n.all()).to.equals(false);
+    expect(n.any()).to.equals(true);
+  });
 });

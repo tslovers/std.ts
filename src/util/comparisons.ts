@@ -23,11 +23,11 @@
  * @returns 1 if a is greater than b, 0 if a equals b, -1 otherwise.
  */
 export function defaultComparison(a: any, b: any): number {
-    if (a > b) {
-        return 1;
-    } else if (a < b) {
-        return -1;
-    } else {
-        return 0;
-    }
+  if (a > b) {
+    return 1;
+  } else if (a < b) {
+    return -1;
+  } else {
+    return 0;
+  }
 }

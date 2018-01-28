@@ -18,11 +18,11 @@
 import * as std from '../src/std';
 
 describe('std.ts', () => {
-    it('It works!', () => {
-        // In this section you may put some test to the code for extra
-        // features you may be testing. This is for the annoyance of
-        // compile, go to node, run again your code, etc. Besides, npm test
-        // tells you which line collapse and this is a huge time saver for
-        // debugging new features.
-    });
+  it('It works!', () => {
+    // In this section you may put some test to the code for extra
+    // features you may be testing. This is for the annoyance of
+    // compile, go to node, run again your code, etc. Besides, npm test
+    // tells you which line collapse and this is a huge time saver for
+    // debugging new features.
+  });
 });

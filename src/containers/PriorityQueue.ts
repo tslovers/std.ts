@@ -27,33 +27,36 @@ import {Queue} from './Queue';
  */
 export class PriorityQueue<T> extends Queue<T> {
 
-    /**
-     * Constructs queue.
-     */
-    constructor(private compareFunction: (a: T, b: T) => number = dc) {
-        super();
-    }
+  /**
+   * Constructs queue.
+   */
+  constructor(private compareFunction: (a: T, b: T) => number = dc) {
+    super();
+  }
 
-    /**
-     * Inserts an element to the queue.
-     * @param e The element to insert to the queue.
-     */
-    public push(e: T): void {
-        let i = 0, comparison;
-        for (i = 0; i < this.size(); i++) {
-            if ((comparison = this.compareFunction(e, this._store[i])) > 0) {
-                break;
-            } else if (comparison === 0) {
-                i++;
-                break;
-            }
+  /**
+   * Inserts an element to the queue.
+   * @param e The element to insert to the queue.
+   */
+  public push(e: T): void {
+    let i = 0, comparison;
+    const n = this.size();
+    for (i = 0; i < n; i++) {
+      if ((comparison = this.compareFunction(e, this._store[i])) > 0) {
+        break;
+      } else if (comparison === 0) {
+        while (i < n && this.compareFunction(e, this._store[i]) === 0) {
+          i++;
         }
-        this._store.splice(i, 0, e);
+        break;
+      }
     }
+    this._store.splice(i, 0, e);
+  }
 
-    public info() {
-        return this._store;
-    }
+  public info() {
+    return this._store;
+  }
 }
 
 /**
@@ -63,11 +66,11 @@ export class PriorityQueue<T> extends Queue<T> {
  * @returns 0 if a and b are equal, 1 if a is greater than b, -1 otherwise.
  */
 function dc(a: any, b: any): number {
-    if (a === b) {
-        return 0;
-    }
-    if (a > b) {
-        return 1;
-    }
-    return -1;
+  if (a === b) {
+    return 0;
+  }
+  if (a > b) {
+    return 1;
+  }
+  return -1;
 }

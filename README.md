@@ -1,9 +1,10 @@
-[![Version](https://img.shields.io/npm/v/std.ts.svg)](https://www.npmjs.com/package/std.ts)
-[![Downloads](https://img.shields.io/npm/dm/std.ts.svg)](https://www.npmjs.com/package/std.ts)
-[![Build Status](https://img.shields.io/travis/IpiVasquez/std.ts.svg)](https://travis-ci.org/IpiVasquez/std.ts)
-![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)
-[![License](https://img.shields.io/github/license/IpiVasquez/std.ts.svg)](https://github.com/IpiVasquez/std.ts/blob/master/LICENSE)
+[![Build Status][build-image]][build-url]
+[![Version][npm-image]][npm-url]
+[![Downloads][npm-downloads-image]][npm-url]
+![Maintenance][maintain-image]
+[![License][license-image]][license-url]
 # std.ts
+
 TypeScript Standard Library (std.ts) is a collection of classes and functions
 inspired and adapted from C++ Standard Library. Although std.ts is written in
 TypeScript, it can be used without any issues on JavaScript.
@@ -19,8 +20,22 @@ $ npm install --save std.ts
 ```
 
 ## Usage
-```js
+> Still a work in progress. However, std.ts is build using typescript so this 
+types may help you to uncover all functions inside this classes.
+Furthermore, you can check the examples on this repository while we work on 
+our documentation.
 
+```js
+const std = require('std.ts');
+let q = new std.Stack();
+
+q.push('!');
+q.push('world');
+q.push('Hello');
+
+while(!q.empty()) {
+    console.log(q.pop());
+}
 ```
 
 ## Features
@@ -56,3 +71,15 @@ adapted to TS/JS and we'll be working and accepting suggestions on this.
     * tuple
     * utility
 * Streams and IO
+
+[npm-image]: https://img.shields.io/npm/v/std.ts.svg
+[npm-downloads-image]: https://img.shields.io/npm/dm/std.ts.svg
+[npm-url]: https://www.npmjs.com/package/std.ts
+
+[build-image]: https://img.shields.io/travis/tslovers/std.ts.svg
+[build-url]: https://travis-ci.org/trslovers/std.ts
+
+[license-image]: https://img.shields.io/github/license/tslovers/std.ts.svg
+[license-url]: https://github.com/tslovers/std.ts/blob/master/LICENSE
+
+[maintain-image]: https://img.shields.io/maintenance/yes/2018.svg

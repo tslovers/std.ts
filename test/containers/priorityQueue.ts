@@ -22,8 +22,8 @@ import {expect} from 'chai';
  * Generic interface for testing Priority Queue.
  */
 interface PQTest {
-    value: number;
-    msg: string;
+  value: number;
+  msg: string;
 }
 
 /**
@@ -33,52 +33,52 @@ interface PQTest {
  * @returns 1 if a has higher value than b, 0 if they're equals, -1 otherwise.
  */
 function pqTestCompare(a: PQTest, b: PQTest): number {
-    if (b.value === a.value) {
-        return 0;
-    }
-    if (a.value > b.value) {
-        return 1;
-    }
-    return -1;
+  if (b.value === a.value) {
+    return 0;
+  }
+  if (a.value > b.value) {
+    return 1;
+  }
+  return -1;
 }
 
 describe('priority queue', () => {
-    const queue = new PriorityQueue<PQTest>(pqTestCompare);
+  const queue = new PriorityQueue<PQTest>(pqTestCompare);
 
-    it('should have 3 elements', () => {
-        // First element
-        queue.push({
-            value: 1,
-            msg: 'LOL1'
-        });
-        // Goes to second because has the same value but enters after LOL1
-        queue.push({
-            value: 1,
-            msg: 'LOL2'
-        });
-        // Goes first because has higher value than LOL1 & LOL2
-        queue.push({
-            value: 2,
-            msg: 'LOL3'
-        });
-        expect(queue.size()).to.equals(3);
+  it('should have 3 elements', () => {
+// First element
+    queue.push({
+      value: 1,
+      msg: 'LOL1'
     });
+// Goes to second because has the same value but enters after LOL1
+    queue.push({
+      value: 1,
+      msg: 'LOL2'
+    });
+// Goes first because has higher value than LOL1 & LOL2
+    queue.push({
+      value: 2,
+      msg: 'LOL3'
+    });
+    expect(queue.size()).to.equals(3);
+  });
 
-    it('should have LOL3 at front', () => {
-        expect(queue.front().msg).to.equals('LOL3');
-    });
+  it('should have LOL3 at front', () => {
+    expect(queue.front().msg).to.equals('LOL3');
+  });
 
-    it('should have LOL2 at back', () => {
-        expect(queue.back().msg).to.equals('LOL2');
-    });
+  it('should have LOL2 at back', () => {
+    expect(queue.back().msg).to.equals('LOL2');
+  });
 
-    it('should pop LOL3, then pop LOL1, then LOL2', () => {
-        expect(queue.pop().msg).to.equals('LOL3');
-        expect(queue.pop().msg).to.equals('LOL1');
-        expect(queue.pop().msg).to.equals('LOL2');
-    });
+  it('should pop LOL3, then pop LOL1, then LOL2', () => {
+    expect(queue.pop().msg).to.equals('LOL3');
+    expect(queue.pop().msg).to.equals('LOL1');
+    expect(queue.pop().msg).to.equals('LOL2');
+  });
 
-    it('should have no elements left', () => {
-        expect(queue.size()).to.equals(0);
-    });
+  it('should have no elements left', () => {
+    expect(queue.size()).to.equals(0);
+  });
 });

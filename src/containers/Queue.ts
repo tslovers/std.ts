@@ -21,68 +21,68 @@
  * from another end of the container.
  */
 export class Queue<T> {
-    protected _store: T[];
+  protected _store: T[];
 
-    /**
-     * Constructs queue.
-     */
-    constructor() {
-        this._store = [];
-    }
+  /**
+   * Constructs queue.
+   */
+  constructor() {
+    this._store = [];
+  }
 
-    /**
-     * Checks the size of the queue and returns value.
-     * @returns The size of the queue.
-     */
-    public size(): number {
-        return this._store.length;
-    }
+  /**
+   * Checks the size of the queue and returns value.
+   * @returns The size of the queue.
+   */
+  public size(): number {
+    return this._store.length;
+  }
 
-    /**
-     * Accesses the next element.
-     * @returns The front element on the queue.
-     */
-    public front(): T {
-        return this._store[0];
-    }
+  /**
+   * Accesses the next element.
+   * @returns The front element on the queue.
+   */
+  public front(): T {
+    return this._store[0];
+  }
 
-    /**
-     * Accesses the last element.
-     * @returns e The back of the queue.
-     */
-    public back(): T {
-        return this._store[this.size() - 1];
-    }
+  /**
+   * Accesses the last element.
+   * @returns e The back of the queue.
+   */
+  public back(): T {
+    return this._store[this.size() - 1];
+  }
 
-    /**
-     * Extracts the front element from the queue and returns it.
-     * @returns The front element of the queue.
-     */
-    public pop(): T {
-        return this._store.shift();
-    }
+  /**
+   * Extracts the front element from the queue and returns it.
+   * @returns The front element of the queue.
+   */
+  public pop(): T {
+    return this._store.shift();
+  }
 
-    /**
-     * Extracts the back element from the queue and returns it.
-     * @returns The back element at the queue.
-     */
-    public popBack(): T {
-        return this._store.pop();
-    }
+  /**
+   * Extracts the back element from the queue and returns it.
+   * @returns The back element at the queue.
+   */
+  public popBack(): T {
+    return this._store.pop();
+  }
 
-    /**
-     * Inserts an element to the queue.
-     * @param e The element to insert to the queue.
-     */
-    public push(e: T): void {
-        this._store.push(e);
-    }
+  /**
+   * Inserts an element to the queue.
+   * @param e The element to insert to the queue.
+   */
+  public push(e: T): void {
+    this._store.push(e);
+  }
 
-    /**
-     * Tests if the stack has any elements.
-     * @returns true if there are no elements on the stack, false otherwise.
-     */
-    public empty(): boolean {
-        return this.size() === 0;
-    }
+  /**
+   * Tests if the stack has any elements.
+   * @returns true if there are no elements on the stack, false otherwise.
+   */
+  public empty(): boolean {
+    return this.size() === 0;
+  }
 }

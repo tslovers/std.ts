@@ -19,16 +19,16 @@ import {upperBound} from '../../src/algorithm';
 import {expect} from 'chai';
 
 describe('structures::lowerBound', () => {
-    it('should find lower bounds', () => {
-        const array = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+  it('should find lower bounds', () => {
+    const array = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
 
-        expect(upperBound(array, 0, array.length, 1))
-            .to.equals(1);
-        expect(upperBound(array, 0, array.length, 6))
-            .to.equals(3);
-        expect(upperBound(array, 0, array.length, 0))
-            .to.equals(0);
-        expect(upperBound(array, 0, array.length, 30))
-            .to.equals(array.length);
-    });
+    expect(upperBound(array, 0, array.length, 1))
+      .to.equals(1);
+    expect(upperBound(array, 0, array.length, 6))
+      .to.equals(3);
+    expect(upperBound(array, 0, array.length, 0))
+      .to.equals(0);
+    expect(upperBound(array, 0, array.length, 30))
+      .to.equals(array.length);
+  });
 });

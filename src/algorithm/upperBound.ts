@@ -34,34 +34,34 @@ export function upperBound(array: any[],
                            end: number,
                            value: any,
                            compare: (a: any, b: any) => number = defaultComparison): number {
-    const idx = ub(begin, end);
-    const cmp = compare(value, array[idx]);
-    // Adapt the result to upper bound.
-    const u = ub(begin, end);
-    if (array[u] === value) {
-        return u + 1;
-    }
-    return u;
+  const idx = ub(begin, end);
+  const cmp = compare(value, array[idx]);
+  // Adapt the result to upper bound.
+  const u = ub(begin, end);
+  if (array[u] === value) {
+    return u + 1;
+  }
+  return u;
 
-    /**
-     * Recursively searches value in array at [b, e).
-     * @param b
-     * @param e
-     * @returns The position of value.
-     */
-    function ub(b: number, e: number): number {
-        if (b === e) {
-            return b;
-        }
-        const v = (b + e) >> 1;
-        const c = compare(value, array[v]);
-
-        if (c === 0) {
-            return v;
-        } else if (c < 0) {
-            return ub(b, v);
-        } else {
-            return ub(v + 1, e);
-        }
+  /**
+   * Recursively searches value in array at [b, e).
+   * @param b
+   * @param e
+   * @returns The position of value.
+   */
+  function ub(b: number, e: number): number {
+    if (b === e) {
+      return b;
     }
+    const v = (b + e) >> 1;
+    const c = compare(value, array[v]);
+
+    if (c === 0) {
+      return v;
+    } else if (c < 0) {
+      return ub(b, v);
+    } else {
+      return ub(v + 1, e);
+    }
+  }
 }

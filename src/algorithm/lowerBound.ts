@@ -34,38 +34,38 @@ export function lowerBound(array: any[],
                            end: number,
                            value: any,
                            compare: (a: any, b: any) => number = defaultComparison): number {
-    const idx = lb(begin, end);
-    const cmp = compare(value, array[idx]);
-    // Adapt the result to lower bound.
-    if (cmp < 0 && idx !== 0) {
-        return idx - 1;
+  const idx = lb(begin, end);
+  const cmp = compare(value, array[idx]);
+  // Adapt the result to lower bound.
+  if (cmp < 0 && idx !== 0) {
+    return idx - 1;
+  } else {
+    if (idx === end) {
+      return idx - 1;
     } else {
-        if (idx === end) {
-            return idx - 1;
-        } else {
-            return idx;
-        }
+      return idx;
     }
+  }
 
-    /**
-     * Recursively searches value in array at [b, e).
-     * @param b
-     * @param e
-     * @returns The position of value.
-     */
-    function lb(b: number, e: number): number {
-        if (b === e) {
-            return b;
-        }
-        const v = (b + e) >> 1;
-        const c = compare(value, array[v]);
-
-        if (c === 0) {
-            return v;
-        } else if (c < 0) {
-            return lb(b, v);
-        } else {
-            return lb(v + 1, e);
-        }
+  /**
+   * Recursively searches value in array at [b, e).
+   * @param b
+   * @param e
+   * @returns The position of value.
+   */
+  function lb(b: number, e: number): number {
+    if (b === e) {
+      return b;
     }
+    const v = (b + e) >> 1;
+    const c = compare(value, array[v]);
+
+    if (c === 0) {
+      return v;
+    } else if (c < 0) {
+      return lb(b, v);
+    } else {
+      return lb(v + 1, e);
+    }
+  }
 }
