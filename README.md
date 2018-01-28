@@ -25,16 +25,32 @@ types may help you to uncover all functions inside this classes.
 Furthermore, you can check the examples on this repository while we work on 
 our documentation.
 
-```js
-const std = require('std.ts');
-let q = new std.Stack();
+For JavaScript:
+```javascript
+const std = require('.');
+let s = new std.Stack();
 
-q.push('!');
-q.push('world');
-q.push('Hello');
+s.push('!');
+s.push('world');
+s.push('Hello');
 
-while(!q.empty()) {
-    console.log(q.pop());
+while(!s.empty()) {
+    console.log(s.pop());
+}
+```
+
+For TypeScript:
+```typescript
+import * as std from '.';
+
+let s = new std.Stack<string>();
+
+s.push('!');
+s.push('world');
+s.push('Hello');
+
+while(!s.empty()) {
+    console.log(s.pop());
 }
 ```
 

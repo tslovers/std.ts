@@ -1,6 +1,6 @@
 {
   "name": "std.ts",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Standard Library for Typescript",
   "main": "lib/std.js",
   "types": "types/std.d.ts",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IpiVasquez/std.ts.git"
+    "url": "git+https://github.com/tslovers/std.ts.git"
   },
   "keywords": [
     "std",
@@ -22,9 +22,9 @@
   "author": "Hector J. Vasquez",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/IpiVasquez/std.ts/issues"
+    "url": "https://github.com/tslovers/std.ts/issues"
   },
-  "homepage": "https://github.com/IpiVasquez/std.ts#readme",
+  "homepage": "https://github.com/tslovers/std.ts#readme",
   "devDependencies": {
     "@types/chai": "^4.1.2",
     "@types/debug": "0.0.30",
