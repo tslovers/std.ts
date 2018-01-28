@@ -3,3 +3,11 @@ node_js:
 - '7.1'
 script:
 - npm test
+deploy:
+  provider: npm
+  email: ipi.vasquez@gmail.com
+  api_key:
+    secure: JIbH96mPUMO6i/+QwlbOLg4IR69AI4/BvcsHsxCAMqJ6npRk9ExC+HY0ktXS9zWYy6ArQt6pVvU2eyxgdNdXez3wHMOZ5QHfiLtIJwCZAMVEOJGwL82fU0Kx6asxTXESfzRpjKYDzqu+BrsFARWx/l/gjhJBNzZvjDVyDlUm9+rwcAf7FscgKkrLSdlDl1e6Lh7Po5LNZfi5+bXDYfEyMf8Ppgn3fiiMI718yufgWQqOogRocS5TvVNhqbX1MzSLqag4FevmL2JIYGqo7WdHfMQ6xc0Ar2XYcvWxoHcIpYAy6K/8tZiAea2JlZFU+4C90zmSnxX7nbNSnY7ftI0UdMWGK+9GSWlExsSrWH7sdTUgWawdNPPs5nu9ZdzTzrlXHowLSuRLP3S/1hBTH/NCAhfkg+pv56gkSUXSXsPVWrE9uC86b5M67pfcw8w80FNpGgwtGTY2Ns0UWNo/1PO9Ux28c3Fmyn8X4ZycppgneTyWZHZewwpK3z5EDSrDECARgzDJTeS7bh7ZhlxzYj7yCLXQGumr5bMPYToiVNN5rfgl0DRLuwEzpt8l+PchFbdXxpkr3QW2YiApN1EQ/zrVEvkycZGe03CtfwZCm7FCqFPOoV7FFVNwYdS3LVfJlckie7vvJ4tu9Sykg17r9xKnikMnnR9x82vAbVYmxqO9VUQ=
+  on:
+    tags: true
+    repo: tslovers/std.ts
