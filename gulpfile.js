@@ -1,26 +1,11 @@
 let gulp = require('gulp');
 let ts = require('gulp-typescript');
 let tsLint = require('gulp-tslint');
-let webpack = require('gulp-webpack');
+let webpack = require('webpack-stream');
 let compress = require('gulp-minify');
 let runSeq = require('run-sequence');
 
 gulp.task('default', () => runSeq('ts', 'webpack', 'compress'));
-
-gulp.task('compile:source', function (done) {
-    var tsProject = ts.createProject('tsconfig.json', {
-        rootDir: './src'
-    });
-
-    gulp.src('src/**/*')
-        .pipe(tsProject())
-        .pipe(tsImport(tsProject.config.compilerOptions))
-        .on('error', function (error, callback) {
-            this.emit('end');
-        })
-        .pipe(gulp.dest('lib/'))
-        .on('end', done);
-});
 
 gulp.task('ts', function () {
     let tsProject = ts.createProject('./tsconfig.json', {
