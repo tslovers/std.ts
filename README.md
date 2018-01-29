@@ -46,6 +46,7 @@ For JavaScript:
 
 ```javascript
 const Stack = require('std.ts').Stack;
+
 let s = new Stack();
 
 s.push('!');

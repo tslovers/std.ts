@@ -14,8 +14,8 @@ gulp.task('ts', function () {
     });
 
     let tsResult = gulp.src('./src/**/*.ts').pipe(tsProject());
-    tsResult.js.pipe(gulp.dest('lib'));
     tsResult.dts.pipe(gulp.dest('types'));
+    return tsResult.js.pipe(gulp.dest('lib'));
 });
 
 gulp.task('lint', function () {

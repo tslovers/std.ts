@@ -1,6 +1,6 @@
 {
   "name": "std.ts",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Standard Library for Typescript",
   "main": "lib/std.js",
   "types": "types/std.d.ts",
@@ -8,7 +8,7 @@
     "test": "mocha -r ts-node/register test/*.ts test/**/*.ts",
     "prepare": "gulp",
     "lint": "gulp lint",
-    "gulp": "gulp",
+    "build": "gulp",
     "tsnode": "ts-node"
   },
   "repository": {
