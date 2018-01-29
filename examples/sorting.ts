@@ -15,19 +15,25 @@
  * limitations under the License.
  */
 
-/**
- * Compares two values. This function is not recommended to use with non
- * primitive values.
- * @param a Value to compare.
- * @param b Value to compare.
- * @returns 1 if a is greater than b, 0 if a equals b, -1 otherwise.
- */
-export function defaultComparison(a: any, b: any): number {
-  if (a > b) {
-    return 1;
-  } else if (a < b) {
-    return -1;
-  } else {
-    return 0;
-  }
+import * as std from '..';
+
+declare const process: any;
+
+// If user does not specify size, default array size is 10
+const arraySize = process.argv[2] || 10;
+const array = [];
+
+for (let i = 0; i < arraySize; i++) {
+  array.push(Math.floor(Math.random() * 50));
 }
+
+// Merge sort
+const mergeSortedArray = array.slice();
+std.algorithm.mSort(mergeSortedArray, 0, array.length);
+// Quick sort
+const quickSortedArray = array.slice();
+std.algorithm.sort(quickSortedArray, 0, array.length);
+
+console.log('OR:', array); // Original
+console.log('MS:', mergeSortedArray);
+console.log('QS:', quickSortedArray);

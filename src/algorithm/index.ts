@@ -17,3 +17,6 @@
 
 export * from './lowerBound';
 export * from './upperBound';
+export * from './mergeSort';
+export * from './quickSort';
+export * from './comparisons';

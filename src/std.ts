@@ -15,5 +15,10 @@
  * limitations under the License.
  */
 
+import * as algorithm from './algorithm';
+
 export * from './containers';
-export * from './algorithm';
+
+export {
+  algorithm
+};

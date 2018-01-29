@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import {defaultComparison} from '../util/comparisons';
+import {ascendingComparison as ascending} from './comparisons';
 
 /**
  * Searches for the element specified, if the element is not found, it returns
@@ -33,7 +33,7 @@ export function lowerBound(array: any[],
                            begin: number,
                            end: number,
                            value: any,
-                           compare: (a: any, b: any) => number = defaultComparison): number {
+                           compare: (a: any, b: any) => number = ascending) {
   const idx = lb(begin, end);
   const cmp = compare(value, array[idx]);
   // Adapt the result to lower bound.
