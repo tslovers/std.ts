@@ -25,6 +25,7 @@ features from std library:
     - Algorithm
         - lower_bound as lowerBound
         - upper_bound as upperBound
+        - find (in sorted arrays)
         - sort (quick sort)
         - mSort (merge sort, is not at c++ std)
         - is_sorted as isSorted

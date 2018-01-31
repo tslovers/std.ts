@@ -2,7 +2,7 @@
 ## 1. Read the FAQ
 We are still working at a FAQ. Meanwhile you can skip this step due to the lack of FAQ.
 ## 2. Search for duplicates
-[Search the existing issues](https://github.com/IpiVasquez/std.ts/issues) before logging a new one.
+[Search the existing issues](https://github.com/tslovers/std.ts/issues) before logging a new one.
 ## 3. Did you find a bug?
 If the bug has not been reported yet (previous step) please submit it to the issues page.
 ## 4. Do you have a suggestion?
@@ -26,7 +26,7 @@ Your pull request should:
 * Include a description of what your change intends to do.
 * In the case of a new feature, it is necessary create a new test.
 * Have clear commit messages
-* Follow the code conventions described in [Coding guidelines](https://github.com/IpiVasquez/std.ts/blob/master/CODING_GUIDELINE.md)
+* Follow the code conventions described in [Coding guidelines](https://github.com/tslovers/std.ts/blob/master/CODING_GUIDELINE.md)
 
 ## Running the tests
 To run all test, just run:

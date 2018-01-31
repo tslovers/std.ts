@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-import {lowerBound} from '../../src/algorithm';
+import {find} from '../../src/algorithm';
 import {expect} from 'chai';
 
-describe('algorithm::lowerBound', () => {
-  it('should find lower bounds', () => {
+describe('algorithm::find', () => {
+  it('should find in sorted array', () => {
     const array = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
 
-    expect(lowerBound(array, 0, array.length, 1))
+    expect(find(array, 0, array.length, 1))
       .to.equals(0);
-    expect(lowerBound(array, 0, array.length, 6))
-      .to.equals(2);
-    expect(lowerBound(array, 0, array.length, 0))
-      .to.equals(0);
-    expect(lowerBound(array, 0, array.length, 30))
+    expect(find(array, 0, array.length, 6))
+      .to.equals(-1);
+    expect(find(array, 0, array.length, 0))
+      .to.equals(-1);
+    expect(find(array, 0, array.length, 19))
       .to.equals(array.length - 1);
   });
 });

@@ -18,7 +18,7 @@
 import * as std from '../../src/std';
 import {expect} from 'chai';
 
-describe('algorithms::mergeSort', () => {
+describe('algorithm::mergeSort', () => {
   it('Odd size array, ascending', () => {
     const array = [10, 5, 17, 18, 68, 12, 0, -4, 47];
     std.algorithm.mSort(array, 0, array.length);

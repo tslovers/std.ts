@@ -20,3 +20,4 @@ export * from './upperBound';
 export * from './mergeSort';
 export * from './quickSort';
 export * from './comparisons';
+export * from './find';

@@ -1,6 +1,6 @@
 {
   "name": "std.ts",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Standard Library for Typescript",
   "main": "lib/std.js",
   "types": "types/std.d.ts",
@@ -20,7 +20,7 @@
     "typescript"
   ],
   "author": "Hector J. Vasquez",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/tslovers/std.ts/issues"
   },

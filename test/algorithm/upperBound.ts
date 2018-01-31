@@ -18,7 +18,7 @@
 import {upperBound} from '../../src/algorithm';
 import {expect} from 'chai';
 
-describe('structures::lowerBound', () => {
+describe('algorithm::lowerBound', () => {
   it('should find lower bounds', () => {
     const array = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
 
